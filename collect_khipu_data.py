@@ -6,6 +6,10 @@ def fetch_to_dir(dirname, links):
 	#check input directory existence
 	if not os.path.exists(dirname):
 		os.makedirs(dirname)
+		f = open('.gitignore', 'a+')
+		f.write(dirname + '\n')
+		f.close()
+
 
 	for url_pair in links:
 		if (url_pair[0][-1] == 's'):
