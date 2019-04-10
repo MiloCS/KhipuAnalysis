@@ -20,5 +20,5 @@ python collect_khipu_data.py <name of desired destination directory>
 
 In order to run the table constructor, run:
 ```
-python generate_data_table.py
+python generate_data_table.py <name of target directory to read from>
 ```
