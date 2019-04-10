@@ -12,3 +12,13 @@ In order to use this code yourself, run:
 ```
 git clone https://github.com/MiloCS/KhipuAnalysis.git 
 ```
+
+In order to run the file downloader, run:
+```
+python collect_khipu_data.py <name of desired destination directory>
+```
+
+In order to run the table constructor, run:
+```
+python generate_data_table.py
+```
