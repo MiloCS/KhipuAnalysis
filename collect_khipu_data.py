@@ -22,7 +22,7 @@ def fetch_to_dir(dirname, links):
 def is_valid_row(row):
 	row_soup = BeautifulSoup(str(row), 'html.parser')
 	elems = row_soup.find_all('td')
-	if len(elems) > 0 and re.match('UR*', elems[0].get_text()):
+	if len(elems) > 0: #and re.match('UR*', elems[0].get_text()):
 		return True
 	return False
 
