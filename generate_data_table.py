@@ -5,9 +5,9 @@ def xlsx_to_row(filename):
 	vals = []
 	with xlrd.open_workbook(filename) as wb:
 		sheet = wb.sheets()[0]
-		vals = sheet.col_values(14)
+		vals = [x[1] for x in sheet.col_values(5) if not x == '']
 	vals = vals[1:]
-	vals = [str(x)[0] for x in vals if not x == 0.0]
+	#vals = [str(x)[0] for x in vals if not x == 0]
 	return filename[:-5].split('\\')[-1] + ' ' + ' '.join(vals)
 
 
