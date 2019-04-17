@@ -13,9 +13,10 @@ def fetch_to_dir(dirname, links):
 
 	for url_pair in links:
 		if (url_pair[0][-1] == 's'):
-			continue
+			ext = '.xls'
+		else:
+			ext = '.xlsx'
 		r = requests.get(url_pair[0], allow_redirects=True)
-		ext = '.xlsx'
 		with open(dirname + '\\' + url_pair[1].replace(' ', '_') + ext, 'wb') as f:
 			f.write(r.content)
 
